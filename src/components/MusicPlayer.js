@@ -1,11 +1,10 @@
 import './MusicPlayer.css'
 import React, { useState, useEffect } from 'react';
-import Lyrics from './Lyrics';
 import { Credentials } from './Credentials'
 import axios from 'axios';
 
 
-export default function MusicPlayer({ trackTitle }) {
+export default function MusicPlayer({ trackTitle, toggleLyrics }) {
 
     const spotify = Credentials();  
     const [token, setToken] = useState('');  
@@ -40,16 +39,15 @@ export default function MusicPlayer({ trackTitle }) {
         
     });
 
-    }, [spotify.ClientId, spotify.ClientSecret]);
+    }, [spotify.ClientId, spotify.ClientSecret, trackTitle, toggleLyrics]);
 
     return (
         <div className="music-player-wrapper">
-            <h3>Song Title - Artist</h3>
-            <img src="https://via.placeholder.com/300x300" />
-            {/* <Lyrics /> */}
-            <button className="lyrics-box">show lyrics</button>
-            <p>play/pause</p>
-            <h1>{trackDetail.artist}</h1>
+            <h3>{trackTitle} - {trackDetail.artist}</h3>
+            <img src={trackDetail.imageUrl} />
+            <div>
+                <button onClick={toggleLyrics}> show/hide lyrics </button>
+            </div>
         </div>
     )
 }

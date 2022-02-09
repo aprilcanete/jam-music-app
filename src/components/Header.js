@@ -14,27 +14,25 @@ export default function Header({ songTitle }) {
 
     const handleChange = event => {
         setSong(event.target.value)
-        console.log(song)
     }
 
     const handleSearch = event => {
         songTitle(song)
-        // event.preventDefault()
     }
     return (
         <>
             <header>
                 <button onClick={togglePop} className='login-btn'>Login</button>
                 <h1>  JAM  </h1>
-            <div>
-                <input 
-                    type="text" 
-                    className="search" 
-                    placeholder="song title..." 
-                    onChange={handleChange}
-                />
-                <button onClick={handleSearch} className="src-btn">search</button>
-            </div>
+                <div>
+                    <input 
+                        type="text" 
+                        className="search" 
+                        placeholder="song title..." 
+                        onChange={handleChange}
+                    />
+                    <button onClick={handleSearch} className="src-btn">search</button>
+                </div>
             </header>
             {showLogin && <Login toggle={togglePop}/>}
         </>
