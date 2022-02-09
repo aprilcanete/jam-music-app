@@ -14,12 +14,10 @@ export default function Header({ songTitle }) {
 
     const handleChange = event => {
         setSong(event.target.value)
-        console.log(song)
     }
 
     const handleSearch = event => {
         songTitle(song)
-        // event.preventDefault()
     }
     return (
         <>

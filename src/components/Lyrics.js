@@ -22,7 +22,7 @@ export default function Lyrics({ track }) {
     const fetchLyrics = (trackID) => {
         fetch(`track.lyrics.get?apikey=${APIKEY}&track_id=${trackID}`)
         .then(res => res.json())
-        .then(res => setLyrics(res.message.body.lyrics.lyrics_body))
+        .then(res => setLyrics(res.message.body.lyrics.lyrics_body.split('*******')[0]))
         .catch((err)=>{
             console.log(err.message)
         })

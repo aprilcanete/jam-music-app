@@ -10,7 +10,6 @@ export default function SearchSong() {
 
     const handleSearch = event => {
         event.preventDefault()
-
     }
     
     return (

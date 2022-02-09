@@ -8,11 +8,21 @@ import Lyrics from './Lyrics'
 
 function App() {
 
-  const [song, setSong] = useState()
+  const [song, setSong] = useState("")
   const [showProfile, setShowProfile] = useState(false)
 
   const handleCallback = (song) => {
     setSong(song)
+  }
+  const handleLyricToggleClick = () => {
+    let lyrics = document.getElementsByClassName("lyrics-box")
+    for(let i=0; i<lyrics.length; i++) {
+      if(lyrics[i].style.display === "block") {
+        lyrics[i].style.display = "none"
+      } else {
+        lyrics[i].style.display = "block"
+      }
+   }
   }
 
   return (
@@ -27,7 +37,7 @@ function App() {
           <p>song 3</p>
         </div>
         {showProfile && <ProfilePage />}
-        <MusicPlayer trackTitle={song}/>
+        <MusicPlayer trackTitle={song} toggleLyrics={handleLyricToggleClick}/>
         <Lyrics track={song}/>
       </div>
       <Footer />
