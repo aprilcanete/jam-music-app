@@ -9,16 +9,21 @@ html {
   padding: 20px;
 }
 
-.content-wrapper {
+/* .content-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 500px);
   gap: 20px;
   padding: 20px;
+  margin: 0 auto;
+} */
+
+.container .row {
+  padding: 30px;
+  border: 1px solid #fff;
 }
 
-.content-wrapper div {
-  padding: 15px;
-  border: 1px solid #fff;
+.lyrics-box {
+  width: 100%;
 }
 
 footer {

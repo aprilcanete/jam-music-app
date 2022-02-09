@@ -28,18 +28,25 @@ function App() {
   return (
     <div className="App">
       <Header songTitle={handleCallback} />
-      <div className='content-wrapper'>
-        <div className='playlist-wrapper'>
-          <h4>Playlist</h4>
-          <br />
-          <p>song 1</p>
-          <p>song 2</p>
-          <p>song 3</p>
+      <div className='container'>
+        <div className='row'>
+          <div className='col'>
+            <h4>Playlist</h4>
+            <br />
+            <p>song 1</p>
+            <p>song 2</p>
+            <p>song 3</p>
+          </div>
         </div>
-        {showProfile && <ProfilePage />}
-        <MusicPlayer trackTitle={song} toggleLyrics={handleLyricToggleClick}/>
-        <Lyrics track={song}/>
+        <div className='row'>
+          <div className='col'>
+            <MusicPlayer trackTitle={song} />
+            <button onClick={handleLyricToggleClick}> show/hide lyrics </button>
+            <Lyrics track={song}/>
+          </div>
+        </div>
       </div>
+      {showProfile && <ProfilePage />}
       <Footer />
     </div>
   );

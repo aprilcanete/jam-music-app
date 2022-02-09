@@ -4,7 +4,7 @@ import { Credentials } from './Credentials'
 import axios from 'axios';
 
 
-export default function MusicPlayer({ trackTitle, toggleLyrics }) {
+export default function MusicPlayer({ trackTitle }) {
 
     const spotify = Credentials();  
     const [token, setToken] = useState('');  
@@ -39,15 +39,13 @@ export default function MusicPlayer({ trackTitle, toggleLyrics }) {
         
     });
 
-    }, [spotify.ClientId, spotify.ClientSecret, trackTitle, toggleLyrics]);
+    }, [spotify.ClientId, spotify.ClientSecret, trackTitle]);
 
     return (
         <div className="music-player-wrapper">
             <h3>{trackTitle} - {trackDetail.artist}</h3>
             <img src={trackDetail.imageUrl} />
-            <div>
-                <button onClick={toggleLyrics}> show/hide lyrics </button>
-            </div>
+            <h2>{`<<   ||   >>`}</h2>
         </div>
     )
 }
