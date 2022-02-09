@@ -18,10 +18,18 @@ function App() {
   return (
     <div className="App">
       <Header songTitle={handleCallback} />
-      {showProfile && <ProfilePage />}
-      <MusicPlayer trackTitle={song}/>
-      <Lyrics track={song}/>
-      <h1>{song}</h1>
+      <div className='content-wrapper'>
+        <div className='playlist-wrapper'>
+          <h4>Playlist</h4>
+          <br />
+          <p>song 1</p>
+          <p>song 2</p>
+          <p>song 3</p>
+        </div>
+        {showProfile && <ProfilePage />}
+        <MusicPlayer trackTitle={song}/>
+        <Lyrics track={song}/>
+      </div>
       <Footer />
     </div>
   );

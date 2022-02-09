@@ -30,7 +30,8 @@ export default function Lyrics({ track }) {
 
     return (
         <div className="lyrics-box">
-          <p>{lyrics}</p>
+            <p>Lyrics</p>
+            <p>{lyrics}</p>
         </div>
-      );
+        );
 }

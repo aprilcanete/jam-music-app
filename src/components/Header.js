@@ -25,7 +25,7 @@ export default function Header({ songTitle }) {
         <>
             <header>
                 <button onClick={togglePop} className='login-btn'>Login</button>
-                <h1>  JAM  </h1>
+                <h1 className='logo'>JAM</h1>
             <div>
                 <input 
                     type="text" 
