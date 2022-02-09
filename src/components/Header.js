@@ -3,20 +3,38 @@ import Login from './Login';
 import SearchSong from './SearchSong';
 import { useState } from 'react';
 
-export default function Header() {
+export default function Header({ songTitle }) {
 
     const [showLogin, setShowLogin] = useState(false)
+    const [song, setSong] = useState();
 
     const togglePop = () => {
         setShowLogin(!showLogin)
     }
-    
+
+    const handleChange = event => {
+        setSong(event.target.value)
+        console.log(song)
+    }
+
+    const handleSearch = event => {
+        songTitle(song)
+        // event.preventDefault()
+    }
     return (
         <>
             <header>
                 <button onClick={togglePop} className='login-btn'>Login</button>
                 <h1>  JAM  </h1>
-                <SearchSong />
+            <div>
+                <input 
+                    type="text" 
+                    className="search" 
+                    placeholder="song title..." 
+                    onChange={handleChange}
+                />
+                <button onClick={handleSearch} className="src-btn">search</button>
+            </div>
             </header>
             {showLogin && <Login toggle={togglePop}/>}
         </>
