@@ -7,7 +7,7 @@ export default function MusicPlayer() {
         <div className="music-player-wrapper">
             <h3>Song Title - Artist</h3>
             <img src="https://via.placeholder.com/300x300" />
-            <Lyrics />
+            {/* <Lyrics /> */}
             <button className="lyrics-box">show lyrics</button>
             <p>play/pause</p>
         </div>
