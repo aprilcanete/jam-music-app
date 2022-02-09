@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Header songTitle={handleCallback} />
       {showProfile && <ProfilePage />}
-      <MusicPlayer />
+      <MusicPlayer trackTitle={song}/>
       <Lyrics track={song}/>
       <h1>{song}</h1>
       <Footer />
