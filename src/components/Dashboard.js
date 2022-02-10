@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useAuth from './useAuth'
 import SpotifyWebApi from "spotify-web-api-node"
 import { Container, Form } from 'react-bootstrap';
@@ -16,6 +16,8 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 export default function Dashboard({ code })  {
+  const divRef = useRef(null);
+
   const accessToken = useAuth(code);
   const [search, setSearch] = useState("")
   const [searchResults, setSearchResults] = useState([])
@@ -77,13 +79,13 @@ export default function Dashboard({ code })  {
 
     return () => (cancel = true)
   }, [search, accessToken])
-  
-  
+
+
+  console.log(searchResults);
 
   return (
     <>
-    <Header />
-    <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
+    <Container className="d-flex flex-column py-2" >
       <Form.Control
         type="search"
         placeholder="Search Songs/Artists"
@@ -100,6 +102,7 @@ export default function Dashboard({ code })  {
         ))}
         {searchResults.length === 0 && (
           <div className="text-center" style={{ whiteSpace: "pre" }}>
+            <h4>{playingTrack?.title} {playingTrack ? '-' : ''} {playingTrack?.artist}</h4>
             {lyrics}
           </div>
         )}
@@ -110,7 +113,5 @@ export default function Dashboard({ code })  {
     </Container>
     <Playlist />
     </>
-    
   )
-  
 }

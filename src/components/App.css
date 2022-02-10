@@ -27,6 +27,10 @@ html {
   width: 100%;
 }
 
+.home-page-content {
+  font-family: 'Padauk', sans-serif;
+}
+
 footer {
   background-color: honeydew;
   color: #000;
