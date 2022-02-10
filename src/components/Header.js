@@ -1,40 +1,26 @@
 import './Header.css'
-import Login from './Login';
-import SearchSong from './SearchSong';
-import { useState } from 'react';
+import { Container } from 'react-bootstrap'
+import { Credentials } from './Credentials'
 
-export default function Header({ songTitle }) {
+const spotify = Credentials();  
 
-    const [showLogin, setShowLogin] = useState(false)
-    const [song, setSong] = useState();
+const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${spotify.ClientId}&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state`
 
-    const togglePop = () => {
-        setShowLogin(!showLogin)
-    }
 
-    const handleChange = event => {
-        setSong(event.target.value)
-    }
+export default function Header({ loginStatus }) {
 
-    const handleSearch = event => {
-        songTitle(song)
-    }
     return (
         <>
             <header>
-                <button onClick={togglePop} className='login-btn'>Login</button>
+                { loginStatus &&
+                    <Container className="d-flex align-items-center" >
+                        <a className="btn btn-success btn-lg" href={AUTH_URL}>
+                        Login with Spotify
+                        </a>
+                    </Container>
+                }
                 <h1 className='logo'>JAM</h1>
-            <div>
-                <input 
-                    type="text" 
-                    className="search" 
-                    placeholder="song title..." 
-                    onChange={handleChange}
-                />
-                <button onClick={handleSearch} className="src-btn">search</button>
-            </div>
             </header>
-            {showLogin && <Login toggle={togglePop}/>}
         </>
         
         
