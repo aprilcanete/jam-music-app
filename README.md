@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# JAM MUSIC APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Jam Music app, our take on a spotify inspired music player with a focus on putting the lyrics front and center while the user listens t their favourite tunes.
 
-## Available Scripts
+## Use our app here
 
-In the project directory, you can run:
+link to app to come
 
-### `npm start`
+## Languages and tools
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The entire application was built using react.js coupled with the  spotify API. We were able to draw both the music and lyrics from the one API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## The Journey
 
-### `npm test`
+Like most journeys, ours started with outright enthusiasm about all the features we were going to implement. We initially broke it down into 5 key elements that we could all work on separately:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Music Player
+* Search bar
+* Synced Lyrics (Karaoke style)
+* User Login
+* User Playlist
 
-### `npm run build`
+We initially believe we would need separate API's for both music and lyrics but realized late into our journey that spotify could handle both.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Obstacles and wins
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The biggest obstacle was working with OAuth as no one on the team had ever done so before. This turned out to be our biggest obstacle and it took a few days for us to tame the beast
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Unsolved issues
 
-### `npm run eject`
+At time of presenttaion our unsolved issues are:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Working out how to sync up lyrics with the songs. This was much more difficult than we originally realized.
+* Generating playlists
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Other features we did not get to
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* One feature discussed very early on was to have a character on screen whose pose and mood would change depending on how many songs were left in the playlist - zero songs = mad, less than 3 = sad, over 5 = happy etc.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
