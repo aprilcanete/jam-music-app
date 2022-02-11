@@ -9,12 +9,10 @@ const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${spotify.Cli
 
 export default function Login({loginStatus}) {
 
-    const message = `Hey,  before we jam,  make sure you log in to spotify!`
-
     return (
         <>
             {loginStatus &&
-            <Container className="d-flex justify-content-center align-items-center" style={{minHeight: "20vh"}}>
+            <Container className="d-flex align-items-center" style={{minHeight: "10vh", maxHeight: "50vh"}}>
                 <img src="/jam-icon.png" alt="jam icon" style={{ width:'500px', height: '400px'}}/>
                 <div className='home-page-content'>
                     <h3 className="welcome">Hey,  before we jam,  make sure you log in to spotify!</h3>

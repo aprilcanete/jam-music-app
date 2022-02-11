@@ -1,11 +1,10 @@
 
 header {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .logo {
-    font-family: "Vibur", sans-serif;
+    font-family: 'Monoton', cursive;
     color: #fff;
     text-shadow:
         0 0 7px #fff,
@@ -16,8 +15,8 @@ header {
         0 0 92px #f09,
         0 0 102px #f09,
         0 0 151px #f09;
-    font-size: 5.2rem;
-    animation: pulsate 0.30s ease-in-out infinite alternate;
+    font-size: 9.2rem;
+    animation: pulsate 0.1s ease-in-out infinite alternate;
 }
 
 @keyframes pulsate {

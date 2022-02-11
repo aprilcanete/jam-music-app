@@ -2,26 +2,19 @@
     position: relative;
 } 
 
-.jam1 {
-    width: 40vh;
-    height: 40vh;
-    position: fixed;
-    left: 20vh;
-    opacity: 0.5;
-}
 .jam3 {
     width: 40vh;
     height: 40vh;
     position: fixed;
     left: 20vh;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 .jam2 {
     width: 40vh;
     height: 40vh;
     position: fixed;
-    right: 20vh;
-    opacity: 0.5;
+    right: 25vh;
+    opacity: 0.3;
 }
 .lyrics {
     opacity: 1;
@@ -73,3 +66,8 @@
         opacity: 0.5;
     }
   }
+
+
+  /* #lyrics-search-box {
+    display: none;
+  } */

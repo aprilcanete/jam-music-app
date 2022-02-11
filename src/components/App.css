@@ -7,6 +7,7 @@ html {
   color: #fff;
   text-align: center;
   padding: 20px;
+  height: 100vh;
 }
 
 .music-player-wrapper {
@@ -18,17 +19,13 @@ html {
 }
 
 
-.container .row {
-  padding: 30px;
-  border: 1px solid #fff;
-}
-
-.lyrics-box {
-  width: 100%;
-}
-
 .home-page-content {
   font-family: 'Padauk', sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  height: 100%;
 }
 
 footer {

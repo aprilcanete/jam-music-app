@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import useAuth from './useAuth'
-import SpotifyWebApi from "spotify-web-api-node"
 import { Container, Form } from 'react-bootstrap';
+import { Credentials } from './Credentials'
+import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
+import useAuth from './useAuth'
 import TrackSearchResult from './TrackSearchResult'
 import Player from './Player'
-import Header from './Header'
-import Playlist from './Playlist';
-import { Credentials } from './Credentials'
 import './Dashboard.css'
 
 const spotify = Credentials();  
@@ -81,19 +79,16 @@ export default function Dashboard({ code })  {
     return () => (cancel = true)
   }, [search, accessToken])
 
-
-  console.log(searchResults);
-
   return (
     <>
-    <Container className="d-flex flex-column py-2" >
+    <Container className="d-flex flex-column py-5">
       <Form.Control
         type="search"
         placeholder="Search Songs/Artists"
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
-      <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+      <div className="flex-grow-1 my-1" id='lyrics-search-box' style={{ overflowY: "auto" }}>
         {searchResults.map(track => (
           <TrackSearchResult
             track={track}
@@ -101,9 +96,11 @@ export default function Dashboard({ code })  {
             chooseTrack={chooseTrack}
           />
         ))}
+        <br />
         {searchResults.length === 0 && (
           <div className="text-center" style={{ whiteSpace: "pre" }}>
-            <h4>{playingTrack?.title} {playingTrack ? '-' : ''} {playingTrack?.artist}</h4>
+            <h4>{playingTrack?.title} {playingTrack ? 'Lyrics' : ''}</h4>
+            <p style={{fontStyle: 'italic'}}>{playingTrack ? 'by' : ''} {playingTrack?.artist}</p>
             <img src="jam-icon-3.png" className="jam3"/>
             <img src="jam-icon-2.png" className="jam2"/>
             <p className="lyrics">{lyrics}</p>
