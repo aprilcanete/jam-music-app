@@ -6,7 +6,6 @@ import axios from "axios"
 import useAuth from './useAuth'
 import TrackSearchResult from './TrackSearchResult'
 import Player from './Player'
-import Playlist from './Playlist';
 
 const spotify = Credentials();  
 
@@ -101,7 +100,9 @@ export default function Dashboard({ code })  {
           <div className="text-center" style={{ whiteSpace: "pre" }}>
             <h4>{playingTrack?.title} {playingTrack ? 'Lyrics' : ''}</h4>
             <p style={{fontStyle: 'italic'}}>{playingTrack ? 'by' : ''} {playingTrack?.artist}</p>
-            {lyrics}
+            <img src="jam-icon-3.png" className="jam3"/>
+            <img src="jam-icon-2.png" className="jam2"/>
+            <p className="lyrics">{lyrics}</p>
           </div>
         )}
       </div>
@@ -109,7 +110,6 @@ export default function Dashboard({ code })  {
         <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
       </div>
     </Container>
-    <Playlist />
     </>
   )
 }
