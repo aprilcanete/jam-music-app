@@ -8,6 +8,7 @@ import Player from './Player'
 import Header from './Header'
 import Playlist from './Playlist';
 import { Credentials } from './Credentials'
+import './Dashboard.css'
 
 const spotify = Credentials();  
 
@@ -103,7 +104,9 @@ export default function Dashboard({ code })  {
         {searchResults.length === 0 && (
           <div className="text-center" style={{ whiteSpace: "pre" }}>
             <h4>{playingTrack?.title} {playingTrack ? '-' : ''} {playingTrack?.artist}</h4>
-            {lyrics}
+            <img src="jam-icon-3.png" className="jam3"/>
+            <img src="jam-icon-2.png" className="jam2"/>
+            <p className="lyrics">{lyrics}</p>
           </div>
         )}
       </div>
@@ -111,7 +114,6 @@ export default function Dashboard({ code })  {
         <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
       </div>
     </Container>
-    <Playlist />
     </>
   )
 }
