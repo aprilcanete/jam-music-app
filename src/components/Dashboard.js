@@ -6,6 +6,7 @@ import axios from "axios"
 import useAuth from './useAuth'
 import TrackSearchResult from './TrackSearchResult'
 import Player from './Player'
+import './Dashboard.css'
 
 const spotify = Credentials();  
 
@@ -80,14 +81,14 @@ export default function Dashboard({ code })  {
 
   return (
     <>
-    <Container className="d-flex flex-column py-5" >
+    <Container className="d-flex flex-column py-5">
       <Form.Control
         type="search"
         placeholder="Search Songs/Artists"
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
-      <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+      <div className="flex-grow-1 my-1" id='lyrics-search-box' style={{ overflowY: "auto" }}>
         {searchResults.map(track => (
           <TrackSearchResult
             track={track}
