@@ -1,0 +1,75 @@
+.text-center {
+    position: relative;
+} 
+
+.jam1 {
+    width: 40vh;
+    height: 40vh;
+    position: fixed;
+    left: 20vh;
+    opacity: 0.5;
+}
+.jam3 {
+    width: 40vh;
+    height: 40vh;
+    position: fixed;
+    left: 20vh;
+    opacity: 0.5;
+}
+.jam2 {
+    width: 40vh;
+    height: 40vh;
+    position: fixed;
+    right: 20vh;
+    opacity: 0.5;
+}
+.lyrics {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1058px) {
+    .jam1 {
+        width: 20vh;
+        height: 20vh;
+        position: fixed;
+        left: 10vh;
+        opacity: 0.5;
+    }
+    .jam3 {
+        width: 20vh;
+        height: 20vh;
+        position: fixed;
+        left: 10vh;
+        opacity: 0.5;
+    }
+    .jam2 {
+        width: 20vh;
+        height: 20vh;
+        position: fixed;
+        right: 10vh;
+        opacity: 0.5;
+    }
+}
+@media only screen and (max-width: 523px) {
+    .jam1 {
+        width: 10vh;
+        height: 10vh;
+        position: fixed;
+        left: 5vh;
+        opacity: 0.5;
+    }
+    .jam3 {
+        width: 10vh;
+        height: 10vh;
+        position: fixed;
+        left: 5vh;
+        opacity: 0.5;
+    }
+    .jam2 {
+        width: 10vh;
+        height: 10vh;
+        position: fixed;
+        right: 5vh;
+        opacity: 0.5;
+    }
+  }

@@ -1,5 +1,7 @@
 import { Credentials } from './Credentials'
 import { Container } from 'react-bootstrap'
+import React from 'react'
+import './Login.css'
 
 const spotify = Credentials();  
 
@@ -15,7 +17,7 @@ export default function Login({loginStatus}) {
             <Container className="d-flex justify-content-center align-items-center" style={{minHeight: "20vh"}}>
                 <img src="/jam-icon.png" alt="jam icon" style={{ width:'500px', height: '400px'}}/>
                 <div className='home-page-content'>
-                    <h3>Hey,  before we jam,  make sure you log in to spotify!</h3>
+                    <h3 className="welcome">Hey,  before we jam,  make sure you log in to spotify!</h3>
                     <br />
                     <br />
                     <a className="btn btn-success btn-lg" href={AUTH_URL}>
