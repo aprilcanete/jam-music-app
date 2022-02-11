@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {code ? <Dashboard code={code} loginStatus={false}/> : <Login loginStatus={true}/>}
+      <div className='container'>
+        {code ? <Dashboard code={code} loginStatus={false}/> : <Login loginStatus={true}/>}
+      </div>
       <Footer />
     </div>
   );

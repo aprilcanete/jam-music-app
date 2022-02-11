@@ -3,7 +3,7 @@
 export default function Footer() {
     return (
         <footer>
-            <span>&copy; JAM 2022</span>
+            <span>Copyright &copy; 2022 JAM Music</span>
         </footer>
     )
 }

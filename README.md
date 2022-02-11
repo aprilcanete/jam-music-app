@@ -1,14 +1,14 @@
 # JAM MUSIC APP
 
-Welcome to Jam Music app, our take on a spotify inspired music player with a focus on putting the lyrics front and center while the user listens t their favourite tunes.
+Welcome to JAM Music app, our take on a Spotify inspired music player with a focus on putting the lyrics front and center while the user listens to their favourite tunes.
 
 ## Use our app here
 
-link to app to come
+link to app to come...
 
 ## Languages and tools
 
-The entire application was built using react.js coupled with the  spotify API. We were able to draw both the music and lyrics from the one API.
+The entire application was built using React JS and Express JS coupled with the spotify API. We were able to draw both the music and lyrics from the one API. Additionaly, we used Bootstrap to design our app layout.
 
 ## The Journey
 
@@ -28,7 +28,7 @@ The biggest obstacle was working with OAuth as no one on the team had ever done 
 
 ## Unsolved issues
 
-At time of presenttaion our unsolved issues are:
+At time of presentation our unsolved issues are:
 
 * Working out how to sync up lyrics with the songs. This was much more difficult than we originally realized.
 * Generating playlists
@@ -37,3 +37,7 @@ At time of presenttaion our unsolved issues are:
 
 * One feature discussed very early on was to have a character on screen whose pose and mood would change depending on how many songs were left in the playlist - zero songs = mad, less than 3 = sad, over 5 = happy etc.
 
+
+### Link to our wireframes and user stories
+
+https://trello.com/b/jEkb7Ei6/jam

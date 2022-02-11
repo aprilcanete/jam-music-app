@@ -18,17 +18,12 @@ html {
 }
 
 
-.container .row {
-  padding: 30px;
-  border: 1px solid #fff;
-}
-
-.lyrics-box {
-  width: 100%;
-}
-
 .home-page-content {
   font-family: 'Padauk', sans-serif;
+}
+
+.container {
+  max-width: 80%;
 }
 
 footer {
