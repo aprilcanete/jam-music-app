@@ -2,9 +2,14 @@
 
 Welcome to JAM Music app, our take on a Spotify inspired music player with a focus on putting the lyrics front and center while the user listens to their favourite tunes.
 
+![Screenshot](public/jam-home-page.png)
+![Screenshot](public/jam-main-page.png)
+
+
 ## Use our app here
 
 link to app to come...
+
 
 ## Languages and tools
 
